@@ -371,3 +371,151 @@ nav button {
     display: block;
   }
 }
+
+
+.product-detail-page,
+.cart-page {
+  width: 86%;
+  margin: 40px auto;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.product-detail-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 38px;
+  padding: 42px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--panel);
+}
+
+.detail-emoji {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  border-radius: 24px;
+  background: #eff6ff;
+  font-size: 7rem;
+}
+
+.product-detail-card h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin: 8px 0;
+}
+
+.detail-price {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.primary-action,
+.secondary-wide {
+  width: 100%;
+  margin-top: 18px;
+  border: none;
+  border-radius: 14px;
+  padding: 15px;
+  font-weight: 900;
+}
+
+.primary-action {
+  background: var(--primary);
+  color: white;
+}
+
+.secondary-wide {
+  background: #edf2f7;
+  color: var(--text);
+}
+
+.cart-page {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 26px;
+  align-items: start;
+}
+
+.cart-list {
+  display: grid;
+  gap: 16px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 70px 1fr auto auto;
+  gap: 18px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--panel);
+}
+
+.cart-item h2 {
+  margin: 0 0 6px;
+}
+
+.cart-item p {
+  margin: 0 0 6px;
+  color: var(--muted);
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 10px;
+  background: #e0ecff;
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.remove-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: 800;
+}
+
+.cart-summary {
+  position: sticky;
+  top: 90px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--panel);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 22px 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 850px) {
+  .product-detail-card,
+  .cart-page {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    grid-template-columns: 1fr;
+  }
+}
