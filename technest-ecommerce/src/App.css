@@ -522,3 +522,212 @@ nav button {
     grid-template-columns: 1fr;
   }
 }
+
+.checkout-page {
+  width: 86%;
+  margin: 40px auto;
+}
+
+.checkout-page h1 {
+  color: var(--text);
+  font-size: 2.8rem;
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.step {
+  padding: 16px;
+  border-radius: 18px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.step span {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #edf2f7;
+  font-weight: 900;
+}
+
+.step.complete span {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.step.current {
+  border: 2px solid var(--primary);
+}
+
+.step.current span {
+  background: var(--primary);
+  color: white;
+}
+
+.step p {
+  margin: 8px 0 0;
+  font-weight: 800;
+}
+
+.checkout-panel {
+  max-width: 760px;
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--panel);
+}
+
+.checkout-panel h2 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.form-grid input {
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 13px;
+  font: inherit;
+}
+
+.helper-text {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.primary-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkout-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.review-row,
+.review-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.review-total {
+  font-size: 1.3rem;
+}
+
+.success-panel {
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .stepper {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-grid input {
+  background: #ffffff;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.form-grid input::placeholder {
+  color: #94a3b8;
+}
+
+.form-grid input:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: var(--primary);
+}
+
+.confirmation-page {
+  width: 86%;
+  margin: 50px auto;
+  display: grid;
+  place-items: center;
+}
+
+.confirmation-card {
+  max-width: 680px;
+  width: 100%;
+  padding: 42px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--panel);
+  text-align: center;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.confirmation-card h1 {
+  color: var(--text);
+  font-size: 2.7rem;
+  margin: 10px 0;
+}
+
+.confirmation-card p {
+  color: var(--muted);
+}
+
+.confirmation-details {
+  margin: 28px 0;
+  padding: 20px;
+  border-radius: 18px;
+  background: #f8fafc;
+  text-align: left;
+}
+
+.confirmation-details p {
+  color: var(--text);
+}
+
+.confirmation-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.confirmation-actions button {
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  background: var(--primary);
+  color: white;
+  font-weight: 900;
+}
+
+.confirmation-actions .secondary-btn {
+  background: #edf2f7;
+  color: var(--text);
+}
