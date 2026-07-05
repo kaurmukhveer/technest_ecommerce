@@ -183,8 +183,11 @@ nav button {
 }
 
 .shop-intro h1 {
-  margin: 10px 0;
+  margin: 50px 0;
   font-size: clamp(2rem, 4vw, 3.5rem);
+  color:var(--text);
+  font-weight:800;
+  
 }
 
 .shop-intro p {
