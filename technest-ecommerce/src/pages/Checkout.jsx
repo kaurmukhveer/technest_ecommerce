@@ -120,20 +120,87 @@ function Checkout({ cart, setCurrentPage }) {
 
       {step === 3 && (
         <section className="checkout-panel">
-          <h2>Review</h2>
-          <p className="section-text">Check your order before placing it.</p>
+          <h2>Review your order</h2>
+          <p className="section-text">Please confirm your items and shipping information before placing your order.</p>
 
           {cart.map((item) => (
-            <div className="review-row" key={item.id}>
-              <span>{item.name} × {item.quantity}</span>
-              <strong>${item.price * item.quantity}</strong>
-            </div>
-          ))}
+  <div className="review-product" key={item.id}>
 
-          <div className="review-total">
-            <span>Total</span>
-            <strong>${subtotal}</strong>
-          </div>
+    <div className="review-product-header">
+
+      <div className="review-product-name">
+       <div className="review-emoji">{item.emoji}</div>
+        <h3>{item.name}</h3>
+        <p>{item.brand}</p>
+      </div>
+
+    </div>
+
+    <div className="review-details">
+
+      <div>
+        <span>Quantity</span>
+        <strong>{item.quantity}</strong>
+      </div>
+
+      <div>
+        <span>Price Each</span>
+        <strong>${item.price}</strong>
+      </div>
+
+      <div>
+        <span>Subtotal</span>
+        <strong>${item.price * item.quantity}</strong>
+      </div>
+
+    </div>
+
+  </div>
+))}
+        <div className="shipping-box">
+
+    <h3>🚚 Shipping</h3>
+
+    <p>
+        ✔ Standard Delivery
+    </p>
+
+    <p>
+        Estimated arrival: 3–5 business days
+    </p>
+
+    <small>
+        Shipping and taxes are not calculated in this prototype.
+    </small>
+
+</div>
+
+
+          <div className="review-summary">
+
+    <div>
+        <span>Subtotal</span>
+        <strong>${subtotal}</strong>
+    </div>
+
+    <div>
+        <span>Shipping</span>
+        <strong>Prototype</strong>
+    </div>
+
+    <div>
+        <span>Taxes</span>
+        <strong>Prototype</strong>
+    </div>
+
+    <hr />
+
+    <div className="grand-total">
+        <span>Total</span>
+        <strong>${subtotal}</strong>
+    </div>
+
+</div>
 
           <div className="checkout-actions">
             <button className="secondary-wide" onClick={() => setStep(2)}>
