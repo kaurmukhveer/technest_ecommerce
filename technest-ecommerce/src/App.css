@@ -888,3 +888,94 @@ nav button {
   border-radius: 18px;
   background: #eff6ff;
 }
+
+.product-detail-card h1,
+.product-detail-card h2 {
+  color: var(--text);
+}
+
+.product-detail-card li {
+  color: var(--text);
+}
+
+.product-detail-card ul {
+  padding-left: 22px;
+}
+
+.product-detail-card .product-brand,
+.product-detail-card .product-stock,
+.product-detail-card .product-rating {
+  color: #475569;
+}
+
+.section h2,
+.results-header h2,
+.cart-page h1,
+.cart-summary h2,
+.shop-intro h1 {
+  color: var(--text);
+}
+.spec-list {
+  margin: 14px 0 20px;
+  padding-left: 22px;
+}
+
+.spec-list li {
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+
+.survey-page {
+  width: 86%;
+  margin: 50px auto;
+  display: grid;
+  place-items: center;
+}
+
+.survey-card {
+  max-width: 720px;
+  width: 100%;
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--panel);
+}
+
+.survey-card h1 {
+  color: var(--text);
+  font-size: 2.4rem;
+}
+
+.survey-card form {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.survey-card label {
+  display: grid;
+  gap: 8px;
+  font-weight: 800;
+}
+
+.survey-card select,
+.survey-card textarea {
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 13px;
+  font: inherit;
+  background: white;
+  color: var(--text);
+}
+
+.survey-card textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.survey-card select:focus,
+.survey-card textarea:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: var(--primary);
+}

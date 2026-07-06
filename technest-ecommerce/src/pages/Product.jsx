@@ -26,11 +26,11 @@ function Product({ product, addToCart, setCurrentPage }) {
           <p className="product-stock">{product.availability}</p>
 
           <h2>Key information</h2>
-          <ul>
-            {product.specs.map((spec) => (
-              <li key={spec}>{spec}</li>
-            ))}
-          </ul>
+          <ul className="spec-list">
+  {product.specs.map((spec) => (
+    <li key={spec}>{spec}</li>
+  ))}
+</ul>
 
           <div className="feature-list">
             {product.features.map((feature) => (
