@@ -118,106 +118,90 @@ function Checkout({ cart, setCurrentPage }) {
         </section>
       )}
 
-      {step === 3 && (
-        <section className="checkout-panel">
-          <h2>Review your order</h2>
-          <p className="section-text">Please confirm your items and shipping information before placing your order.</p>
-
-          {cart.map((item) => (
-  <div className="review-product" key={item.id}>
-
-    <div className="review-product-header">
-
-      <div className="review-product-name">
-       <div className="review-emoji">{item.emoji}</div>
-        <h3>{item.name}</h3>
-        <p>{item.brand}</p>
-      </div>
-
-    </div>
-
-    <div className="review-details">
-
-      <div>
-        <span>Quantity</span>
-        <strong>{item.quantity}</strong>
-      </div>
-
-      <div>
-        <span>Price Each</span>
-        <strong>${item.price}</strong>
-      </div>
-
-      <div>
-        <span>Subtotal</span>
-        <strong>${item.price * item.quantity}</strong>
-      </div>
-
-    </div>
-
-  </div>
-))}
-        <div className="shipping-box">
-
-    <h3>🚚 Shipping</h3>
-
-    <p>
-        ✔ Standard Delivery
+{step === 3 && (
+  <section className="checkout-panel">
+    <h2>Review your order</h2>
+    <p className="section-text">
+      Please confirm your items and shipping information before placing your order.
     </p>
 
-    <p>
-        Estimated arrival: 3–5 business days
-    </p>
+    <div className="review-list">
+      {cart.map((item) => (
+        <div className="review-product" key={item.id}>
+          <div className="review-emoji">{item.emoji}</div>
 
-    <small>
-        Shipping and taxes are not calculated in this prototype.
-    </small>
+          <div className="review-product-name">
+            <h3>{item.name}</h3>
+            <p>{item.brand}</p>
+          </div>
 
-</div>
+          <div className="review-details">
+            <div>
+              <span>Quantity</span>
+              <strong>{item.quantity}</strong>
+            </div>
 
+            <div>
+              <span>Price Each</span>
+              <strong>${item.price}</strong>
+            </div>
 
-          <div className="review-summary">
+            <div>
+              <span>Subtotal</span>
+              <strong>${item.price * item.quantity}</strong>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
 
-    <div>
+    <div className="shipping-box">
+      <h3>🚚 Shipping</h3>
+      <p>✔ Standard Delivery</p>
+      <p>Estimated arrival: 3–5 business days</p>
+      <small>Shipping and taxes are omitted in this course prototype.</small>
+    </div>
+
+    <div className="review-summary">
+      <div>
         <span>Subtotal</span>
         <strong>${subtotal}</strong>
-    </div>
+      </div>
 
-    <div>
+      <div>
         <span>Shipping</span>
-        <strong>Prototype</strong>
-    </div>
+        <strong>Calculated later</strong>
+      </div>
 
-    <div>
+      <div>
         <span>Taxes</span>
-        <strong>Prototype</strong>
-    </div>
+        <strong>Calculated later</strong>
+      </div>
 
-    <hr />
+      <hr />
 
-    <div className="grand-total">
+      <div className="grand-total">
         <span>Total</span>
         <strong>${subtotal}</strong>
+      </div>
     </div>
 
-</div>
-
-          <div className="checkout-actions">
-            <button className="secondary-wide" onClick={() => setStep(2)}>
-              Back
-            </button>
-            <button
-              className="primary-action"
-              onClick={() => {
-                setStep(4);
-                setTimeout(() => setCurrentPage("confirmation"), 600);
-              }}
-            >
-              Place Order
-            </button>
-          </div>
-        </section>
-      )}
+    <div className="checkout-actions review-actions">
+      <button className="secondary-wide" onClick={() => setStep(2)}>
+        Back
+      </button>
+      <button
+        className="primary-action"
+        onClick={() => {
+          setStep(4);
+          setTimeout(() => setCurrentPage("confirmation"), 600);
+        }}
+      >
+        Place Order
+      </button>
+    </div>
+  </section>
+)}
 
       {step === 4 && (
         <section className="checkout-panel success-panel">

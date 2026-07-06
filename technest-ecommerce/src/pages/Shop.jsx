@@ -64,7 +64,7 @@ function Shop({ addToCart, setSelectedProduct, setCurrentPage }) {
 
   return (
     <main className="shop-page">
-      <section className="shop-intro">
+      <section className="shop-hero">
         <p className="sale-badge">Explore TechNest</p>
         <h1>Find the right device faster.</h1>
         <p>
