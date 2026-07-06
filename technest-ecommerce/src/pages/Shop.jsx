@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { products } from "../data/products";
-import FilterSidebar from "../components/FilterSidebar";
+import FilterSidebar from "../components/FilterSideBar";
 import ProductCard from "../components/ProductCard";
 
 const defaultFilters = {
